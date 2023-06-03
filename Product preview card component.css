@@ -1,0 +1,126 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  /* ### Primary */
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Neutral */
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+/* - Very dark blue: hsl(212, 21%, 14%)
+
+
+
+/* fonte */
+--fraunces: 'Fraunces', sans-serif;
+--montserrat: 'Montserrat', sans-serif;
+}
+body{
+  background-color: var(--Cream);
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,350px));
+justify-content: center;
+margin-top: 7rem;
+
+}
+.left{
+  background-image: url(img/image-product-desktop.jpg);
+ 
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 1.5vh;
+  border-bottom-left-radius: 1.5vh;
+  height: 65vh;
+
+
+}
+
+
+/* right div */
+.right{
+  background-color: var(--White);
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 1.5vh;
+  border-bottom-right-radius: 1.5vh;
+  height: 65vh;
+
+}
+.name-item{
+font-family: var(--montserrat);
+letter-spacing: 0.4vh;
+margin-bottom: 2vh;
+color: var(--Dark-grayish-blue);
+}
+.title{
+  font-family: var(--fraunces);
+  margin-bottom: 3vh;
+}
+.description-item{
+  font-size: 14px;
+  font-family: var(--montserrat);
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 3vh;
+}
+.price{
+  display: flex;
+}
+.price-now{
+  font-size: 4vh;
+  color: hsl(136, 35%, 37%);
+font-family: var(--fraunces);
+margin-bottom: 2vh;
+margin-right: 2vh;
+}
+.price-line-throught{
+text-decoration: line-through;
+color: var(--Dark-grayish-blue);
+font-size: 14px;
+}
+.Btn-add-to-cart{
+  border: none;
+  background-color:hsl(136, 35%, 37%) ;
+  padding: 2vh 0;
+  border-radius: 1vh;
+  color: white;
+  cursor: pointer;
+  font-family: var(--montserrat);
+
+}
+.Btn-add-to-cart:hover{
+  background-color:   hsl(137, 91%, 21%);
+  transition: all 0.4s ease-in;
+
+}
+/* icone */
+.fa-cart-shopping{
+  font-size: 1.5vh;
+  margin-right: 1vh;
+}
+
+/* @media */
+@media(max-width:700px){
+.left{
+  border-top-right-radius:1.5vh ;
+  border-bottom-left-radius: 0;
+}
+.right{
+  border-bottom-left-radius: 1.5vh;
+  border-top-right-radius: 0;
+  height: fit-content;
+}
+.left{
+  background-image: url(img/image-product-mobile.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
+}
